@@ -6,6 +6,7 @@ let num1 = '';
 let num2 = '';
 let yaSeIngresoOperacion = false;
 let yaSeIngresoIgual = false;
+let historial = [];
 
 // Clase para la cuenta a realizar
 class Cuenta {
@@ -51,6 +52,7 @@ const botonIgual = document.getElementById("boton-igual");
 const botonReset = document.getElementById("boton-reset");
 const textoCuenta = document.getElementById("cuenta");
 const inputResultado = document.getElementById("resultado");
+const textoHistorial = document.getElementById("historial");
 const botonesNumeros = document.getElementsByClassName("boton-numero");
 const botonesOperaciones = document.getElementsByClassName("boton-operacion");
 
@@ -111,6 +113,20 @@ function calcular() {
     resultado = objetoCuenta.calcular();
 
     inputResultado.value = resultado;
+
+    actualizarHistorial();
+}
+
+function actualizarHistorial() {
+    historial.push(cuenta + " = " + resultado);
+
+    let textoActualizado = "";
+
+    for (const cuentaEntera of historial) {
+        textoActualizado += cuentaEntera + "<br>";
+    }
+
+    textoHistorial.innerHTML = textoActualizado;
 }
 
 function reset() {
