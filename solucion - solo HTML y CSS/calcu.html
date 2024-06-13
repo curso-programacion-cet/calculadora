@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Calculadora</title>
+        <!-- CSS Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- CSS Nuestro -->
+        <link rel="stylesheet" href="./calcu.css">
+    </head>
+    <body>
+        <h1> Mi Calculadora <i class="bi bi-calculator"></i> </h1>
+        <p> Esta es una calculadora simple. <br>
+            Solo se permite ingresar un número, una operación, otro número, y el botón de = 
+        </p>
+        <div id="seccion-calculadora" class="flex-container">
+            <div class="column fila-botones">
+                <input type="button" value="+" class="row boton-calcu boton-operacion">
+                <input type="button" value="-" class="row boton-calcu boton-operacion">
+                <input type="button" value="*" class="row boton-calcu boton-operacion">
+                <input type="button" value="/" class="row boton-calcu boton-operacion">
+            </div>
+            <div class="column fila-botones">
+                <input type="button" value="7" class="row boton-calcu boton-numero">
+                <input type="button" value="8" class="row boton-calcu boton-numero">
+                <input type="button" value="9" class="row boton-calcu boton-numero">
+            </div>
+            <div class="column fila-botones">
+                <input type="button" value="4" class="row boton-calcu boton-numero">
+                <input type="button" value="5" class="row boton-calcu boton-numero">
+                <input type="button" value="6" class="row boton-calcu boton-numero">
+            </div>
+            <div class="column fila-botones">
+                <input type="button" value="1" class="row boton-calcu boton-numero">
+                <input type="button" value="2" class="row boton-calcu boton-numero">
+                <input type="button" value="3" class="row boton-calcu boton-numero">
+            </div>
+            <div class="column fila-botones">
+                <input type="button" value="0" class="boton-calcu">
+                <input type="reset" value="Reset" class="boton-calcu" id="boton-reset">
+                <input type="button" value="=" class="boton-calcu" id="boton-igual">
+            </div>
+        </div>
+
+        <div id="seccion-resultado">
+            <p id="cuenta"></p>
+            <label for="campo-resultado"> El resultado es </label>
+            <input type="text" name="campo-resultado" id="resultado" value="0">
+        </div>
+        
+        <div id="seccion-historial">
+            <h6> <strong> Historial </strong> </h6>
+            <p id="historial"></p>
+        </div>
+
+        <!-- Scripts Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    </body>
+</html>
