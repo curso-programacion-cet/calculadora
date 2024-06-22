@@ -27,6 +27,7 @@ mostrarResultado(resultado);
 function pedirAlUsuarioUnNumero() {
     let numero = prompt("Ingresá un numero");
 
+    // Se les ocurre como cambiar esta validacion usando arrays?
     while (numero != 0 && numero != 1 && numero != 2 && numero != 3 && numero != 4
         && numero != 5 && numero != 6 && numero != 7 && numero != 8 && numero != 9
     ) {
