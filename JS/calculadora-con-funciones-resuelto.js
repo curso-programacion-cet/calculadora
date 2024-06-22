@@ -27,14 +27,31 @@ mostrarResultado(resultado);
 function pedirAlUsuarioUnNumero() {
     let numero = prompt("Ingresá un numero");
 
-    // Se les ocurre como cambiar esta validacion usando arrays?
-    while (numero != 0 && numero != 1 && numero != 2 && numero != 3 && numero != 4
-        && numero != 5 && numero != 6 && numero != 7 && numero != 8 && numero != 9
-    ) {
+    let elNumeroEsValido = validarNumero(numero);
+
+    while (!elNumeroEsValido) {
         numero = prompt("No ingresaste un numero válido. Ingresá un numero");
+        elNumeroEsValido = validarNumero(numero);
     }
 
     return numero;
+}
+
+function validarNumero(numeroIngresado) {
+    let elNumeroEsValido = true; // suponemos que es válido salvo que se demuestre lo contrario
+
+    // Recorremos lo ingresado. Por ejemplo, 123 es válido pero 12abc no
+    for (const caracter of numeroIngresado) {
+        // ¿Se les ocurre como cambiar esta validacion usando arrays?
+        if (caracter != 0 && caracter != 1 && caracter != 2 && caracter != 3 && caracter != 4
+            && caracter != 5 && caracter != 6 && caracter != 7 && caracter != 8 && caracter != 9
+        ) {
+            elNumeroEsValido = false;
+            break;
+        }
+    }
+
+    return elNumeroEsValido;
 }
 
 function pedirAlUsuarioOperacion() {
