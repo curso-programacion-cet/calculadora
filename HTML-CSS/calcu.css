@@ -1,13 +1,19 @@
 /* Por elemento */
+body {
+    background-image: url("https://th.bing.com/th/id/OIP.iZMDVoA_g--P95xt_SF2ygHaFW?rs=1&pid=ImgDetMain");
+}
+
 h1 {
     color: indigo;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    background-color: white; /* agrego este estilo para que se vea bien, ya que el fondo es una imagen */
 }
 
 p, h6 {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    background-color: white; /* agrego este estilo para que se vea bien, ya que el fondo es una imagen */
 }
 
 /* Por clase y por id */
@@ -51,6 +57,7 @@ p, h6 {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     font-size: larger;
+    background-color: white; /* agrego este estilo para que se vea bien, ya que el fondo es una imagen */
 }
 
 #etiqueta-centrada {
