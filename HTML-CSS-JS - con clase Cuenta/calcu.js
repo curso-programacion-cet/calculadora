@@ -94,8 +94,8 @@ for (const boton of botonesOperaciones) {
     });
 }
 
-botonIgual.addEventListener("click", () => calcular());
-botonReset.addEventListener("click", () => reset());
+botonIgual.addEventListener("click", () => calcular);
+botonReset.addEventListener("click", () => reset);
 
 
 // Nuestras funciones
